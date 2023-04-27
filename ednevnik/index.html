@@ -1,0 +1,129 @@
+<!doctype html>
+<!--[if lt IE 9]>      <html class="no-js no-hover lt-ie9" lang="hr"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js no-hover" lang="hr"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="cache-control" content="no-cache">
+
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>e-Dnevnik</title>
+
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes"> <!-- full screen bookmark -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> <!-- disable zoom -->
+	<meta name="format-detection" content="telephone=no"> <!-- disable auto-format -->
+
+	
+
+	<link rel="stylesheet" href="css/main-27466dd19aaf06523b710ff0e3f36abe.css">
+
+	
+	<link rel="stylesheet" href="css/print-dcff0c72ed114a8d17c7b902ccf1ae2d.css" media="print">
+
+	<!--[if lt IE 9]>
+		<script src="/js/ltie9-a2d1d903ef290c25675b17a94beeda4d.js"></script>
+	<![endif]-->
+
+	
+	<script>l10n = [];</script>
+
+	
+	<script src="/js/main.top-b6d872bc70cd5e83f37771c30e8cffe3.js"></script>
+		</head>
+
+<body id="body">
+	
+	<header>
+		<div id="header">
+			<div id="logo" class="t-center left">
+				<div class="logo" >
+					<a href="/">e-Dnevnik</a>
+						<div class="line">
+					</div>	
+				</div>	
+			</div>
+					</div>
+	</header>
+	
+		
+	<div id="content">
+		<div class="form-wrapper-login">
+		<div class="login-title">
+			<span>Dobro došli</span>
+		</div>
+		<form id="login" action="/main/authenticate" method="post" class="form-border-login" novalidate>
+			<label for="username">Korisničko ime:</label>
+			<input type="text" name="username" id="username" class="mt15 autofocus" autocapitalize="off" data-required="true" data-msg="korisničko ime" />
+
+			<br /><br />
+
+			<label for="password">Lozinka:</label>
+			<input type="password" data-type="int" data-required="true" data-msg="lozinka"  pattern="[0-9]*" name="password" id="password" title="Upisite lozinku koristeći samo znamenke!"/>
+			
+
+			<br /><br />
+						<input id="client_submit_timestamp" type="hidden" name="client_submit_timestamp" value="0">
+			<input type="submit" class="button" value="PRIJAVA" />
+		</form>
+	</div>
+
+	
+	</div>
+
+<script type="text/javascript">$('login').addEvent('submit', function(){
+	$('client_submit_timestamp').set('value', Date.now());
+});
+
+
+
+//upozorenje o preniskoj rezoluciji
+var checkScreenSize = function (window_height, window_width){
+	if (jquery('#flash-message-container').children().hasClass('resolution')){
+		if ( ((window_width > 767 && window_height > 500))){
+			jquery('#flash-message-container').find('.resolution').remove();
+		}
+	} else if ((window_width <= 767 || window_height <= 500)){	
+		edFlashAlert('error','Vaša rezolucija je manja od preporučene te nije podržana');
+	}
+}
+
+jquery(window).on('resize', function(){
+	checkScreenSize(innerHeight, innerWidth);
+});
+
+checkScreenSize(window.innerHeight, window.innerWidth);
+</script>
+		
+
+
+	
+			
+	
+
+	
+					
+			<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-analytics.js"></script>
+
+			<script>
+				var firebaseConfig = {
+					apiKey: "AIzaSyDGeuCnj5GrmnRkc2j2PPyFd6DJ3ewajis",
+					authDomain: "e-dnevnik-b8194.firebaseapp.com",
+					databaseURL: "https://e-dnevnik-b8194.firebaseio.com",
+					projectId: "e-dnevnik-b8194",
+					storageBucket: "e-dnevnik-b8194.appspot.com",
+					messagingSenderId: "1077828269295",
+					appId: "1:1077828269295:web:dc5435d71f19f586fad71a",
+					measurementId: "G-ZEC7W5ZTL3"
+			  };
+			  // Initialize Firebase
+			  firebase.initializeApp(firebaseConfig);
+			  firebase.analytics();
+			</script>
+			
+			</body>
+</html>
